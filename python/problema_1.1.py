@@ -1,21 +1,21 @@
 ''' 
 El programa, dado el costo de un producto y la cantidad de dinero entregada
-por el cliente, cacula el vuelto que hay que entregarle al mismo.
+por el cliente, calcula el vuelto que hay que entregarle al mismo.
 '''
 
-def calcular_cambio(precio, pago):
+def calcular_cambio(pagoRecibido, precioProducto):
 
-    return pago - precio
+    return pagoRecibido - precioProducto
 
 def main():
 
     try:
 
-        precio = float(input("Costo del producto: "))   
+        precioProducto = float(input("Costo del producto: "))   
         
-        pago = float(input("Dinero recibido: "))
+        pagoRecibido = float(input("Dinero recibido: "))
 
-        cambio = calcular_cambio(precio, pago)
+        cambio = calcular_cambio(pagoRecibido, precioProducto)
 
         print(f"Cambio: {cambio:.2f}")
 
