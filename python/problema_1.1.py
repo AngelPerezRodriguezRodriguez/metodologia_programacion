@@ -15,13 +15,20 @@ def main():
         
         pagoRecibido = float(input("Dinero recibido: "))
 
-        cambio = calcular_cambio(pagoRecibido, precioProducto)
+        if precioProducto <= 0 or pagoRecibido <= 0:
 
-        print(f"Cambio: {cambio:.2f}")
+            print("Error: el precio y el pago deben ser mayor a cero.")
+            return
 
     except ValueError:
+    #  Se produce cuando una función recibe un argumento con un valor que no es válido para esa función.
 
         print("Error: por favor, ingresa un valor válido.")
+        return
+
+    cambio = calcular_cambio(pagoRecibido, precioProducto)
+
+    print(f"Cambio: {cambio:.2f}")
 
 if __name__ == "__main__":
 

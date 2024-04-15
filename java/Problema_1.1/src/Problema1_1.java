@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.util.InputMismatchException;
 
 /*
  * 
@@ -18,21 +19,31 @@ public class Problema1_1 {
 
      public static void main(String[] args) {
 
+          float precioProducto;
+          float pagoRecibido;
+
           try (Scanner scanner = new Scanner(System.in)) {
 
                System.out.print("Costo del producto: ");
-               float precioProducto = scanner.nextFloat();
+               precioProducto = scanner.nextFloat();
 
                System.out.print("Dinero recibido: ");
-               float pagoRecibido = scanner.nextFloat();
+               pagoRecibido = scanner.nextFloat();
 
-               float cambio = calcular_cambio(pagoRecibido, precioProducto);
+               if (precioProducto <= 0 || pagoRecibido <= 0) {
 
-               System.out.printf("Cambio: %.2f ", cambio);
-
-          } catch (Exception e) {
+                    System.out.println("Error: el precio y el pago deben ser mayor a cero.");
+                    return;
+               }
+          } catch (InputMismatchException e) {
+               // Se produce cuando el tipo de dato ingresado por el usuario no coincide con el
+               // esperado.
 
                System.out.println("Error: por favor, ingresa un valor válido.");
+               return;
           }
+          float cambio = calcular_cambio(pagoRecibido, precioProducto);
+
+          System.out.printf("Cambio: %.2f ", cambio);
      }
 }
