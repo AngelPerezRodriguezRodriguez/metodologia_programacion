@@ -15,13 +15,20 @@ def main():
 
         altura = float(input("Altura del triángulo: "))
 
-        area = calcular_superficie(base, altura)
+        if base <= 0 or altura <= 0:
 
-        print(f"El área es de {area:.2f}")
+            print("Error: la altura y la base deben ser mayor a cero.")
+            return
 
-    except ValueError:
+    except ValueError as e:
+    #  Se produce cuando una función recibe un argumento con un valor que no es válido para esa función.
 
         print("Error: por favor, ingresa un valor válido.")
+        return
+    
+    area = calcular_superficie(base, altura)
+
+    print(f"Área: {area:.2f}")
 
 if __name__ == "__main__":
     
