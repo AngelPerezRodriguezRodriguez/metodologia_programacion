@@ -22,6 +22,11 @@ def main():
     try:
 
         galones = float(input("Galones de gasolina: "))
+
+        if galones <= 0:
+
+            print("Error: el galón debe ser mayor que cero.")
+            return
     
     except ValueError as e:
         # Se produce cuando una función recibe un argumento 

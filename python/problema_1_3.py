@@ -24,6 +24,11 @@ def main():
 
         longitud = float(input("Longitud en pies: "))
 
+        if peso <= 0 or longitud <= 0:
+
+            print("Error: el peso y la longitud deben ser mayores que cero.")
+            return
+
     except ValueError as e:
         # Se produce cuando una función recibe un argumento 
         # con un valor que no es válido para esa función.
