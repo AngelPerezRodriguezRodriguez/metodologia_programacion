@@ -10,7 +10,7 @@ import java.util.InputMismatchException;
  * 
  */
 
-public class Problema1_2 {
+public class Problema_1_2 {
 
     public static float calcular_superficie(float base, float altura) {
 

@@ -10,7 +10,7 @@ import java.util.InputMismatchException;
  * 
  */
 
-public class Problema1_1 {
+public class Problema_1_1 {
 
      public static float calcular_cambio(float pagoRecibido, float precioProducto) {
 

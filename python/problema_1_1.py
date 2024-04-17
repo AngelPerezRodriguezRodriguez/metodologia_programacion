@@ -21,7 +21,8 @@ def main():
             return
 
     except ValueError:
-    #  Se produce cuando una función recibe un argumento con un valor que no es válido para esa función.
+        # Se produce cuando una función recibe un argumento 
+        # con un valor que no es válido para esa función.
 
         print("Error: por favor, ingresa un valor válido.")
         return
