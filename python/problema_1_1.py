@@ -17,7 +17,7 @@ def main():
 
         if precioProducto <= 0 or pagoRecibido <= 0:
 
-            print("Error: el precio y el pago deben ser mayor a cero.")
+            print("Error: el precio y el pago deben ser mayores que cero.")
             return
 
     except ValueError:

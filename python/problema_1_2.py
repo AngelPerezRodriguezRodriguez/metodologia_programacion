@@ -17,7 +17,7 @@ def main():
 
         if base <= 0 or altura <= 0:
 
-            print("Error: la altura y la base deben ser mayor a cero.")
+            print("Error: la altura y la base deben ser mayores que cero.")
             return
 
     except ValueError as e:

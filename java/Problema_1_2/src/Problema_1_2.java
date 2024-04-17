@@ -32,7 +32,7 @@ public class Problema_1_2 {
 
             if (base <= 0 || altura <= 0) {
 
-                System.out.println("Error: la altura y la base deben ser mayor a cero.");
+                System.out.println("Error: la altura y la base deben ser mayores que cero.");
                 return;
             }
         } catch (InputMismatchException e) {

@@ -32,7 +32,7 @@ public class Problema_1_1 {
 
                if (precioProducto <= 0 || pagoRecibido <= 0) {
 
-                    System.out.println("Error: el precio y el pago deben ser mayor a cero.");
+                    System.out.println("Error: el precio y el pago deben ser mayores que cero.");
                     return;
                }
           } catch (InputMismatchException e) {
