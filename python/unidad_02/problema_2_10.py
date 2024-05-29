@@ -49,11 +49,11 @@ def main():
 
     try: 
 
-        numero_01 = int(input("número a: "))
+        numero_01 = int(input("Número a: "))
 
-        numero_02 = int(input("número b: "))
+        numero_02 = int(input("Número b: "))
 
-        numero_03 = int(input("número c: "))
+        numero_03 = int(input("Número c: "))
 
     except ValueError as e:
 

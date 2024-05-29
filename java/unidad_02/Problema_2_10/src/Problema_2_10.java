@@ -60,13 +60,13 @@ public class Problema_2_10 {
 
         try (Scanner scanner = new Scanner(System.in)) {
 
-            System.out.print("número a: ");
+            System.out.print("Número a: ");
             numero01 = scanner.nextInt();
 
-            System.out.print("número b: ");
+            System.out.print("Número b: ");
             numero02 = scanner.nextInt();
 
-            System.out.print("número c: ");
+            System.out.print("Número c: ");
             numero03 = scanner.nextInt();
 
         } catch (InputMismatchException e) {

@@ -1,11 +1,17 @@
-import java.util.InputMismatchException;
 import java.util.Scanner;
+import java.util.InputMismatchException;
+
+/*
+ * El programa, dados como datos el número de la matrícula, carrera, semestre y
+ * promedio de un alumno, determina si dicho alumno es aceptado o no como
+ * miembro de la facultad menor.
+ */
 
 public class Problema_2_13 {
 
     public static void pertenecerFacultad(String carrera, int semestre, float promedio, int matricula) {
 
-        String estado;
+        String estado = "rechazado";
 
         switch (carrera.toLowerCase()) {
 
@@ -14,9 +20,7 @@ public class Problema_2_13 {
                 if (semestre >= 6 && promedio >= 8.8) {
 
                     estado = "aceptado";
-                    break;
                 }
-                estado = "rechazado"; 
                 break;
 
             case "computacion":
@@ -24,9 +28,7 @@ public class Problema_2_13 {
                 if (semestre > 6 && promedio > 8.5) {
 
                     estado = "aceptado";
-                    break;
                 }
-                estado = "rechazado"; 
                 break;
 
             case "contabilidad":
@@ -34,12 +36,10 @@ public class Problema_2_13 {
 
                 if (semestre > 5 && promedio > 8.5) {
 
-                    estado = "Aceptado";
-                    break;
+                    estado = "aceptado";
                 }
-                estado = "rechazado"; 
                 break;
-                
+
             default:
 
                 System.out.println("Nombre de carrera no válido.");
@@ -47,7 +47,7 @@ public class Problema_2_13 {
                 return;
         }
         System.out.printf("El alumno con matrícula %d %n", matricula);
-        System.out.printf("fue %s de la carrera %s", estado, carrera);
+        System.out.printf("es %s en la carrera de %s", estado, carrera);
     }
 
     public static void main(String[] args) {
@@ -81,7 +81,6 @@ public class Problema_2_13 {
                 System.out.println("Error: el semestre debe estar entre 1 y 12.");
                 return;
             }
-
             System.out.print("Promedio: ");
             promedio = scanner.nextFloat();
 

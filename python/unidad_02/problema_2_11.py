@@ -5,8 +5,6 @@ número de minutos que duró la llamada, calcula el costo total de la misma.
 
 def calcular_costo(clave, minutos):
 
-    costo = 0
-
     if clave == 12:
 
         costo = minutos * 2
@@ -34,8 +32,9 @@ def calcular_costo(clave, minutos):
     else:
 
         print("Error: clave no válida.")
-
-    return costo
+        return
+    
+    print(f"El costo de llamada es de {costo} u")
 
 def main():
 
@@ -43,7 +42,7 @@ def main():
 
         clave = int(input("Clave telefónica: "))
 
-        minutos = int(input("Duración de la llamada (min): "))
+        minutos = int(input("Duración de llamada (min): "))
 
         if minutos <= 0:
 
@@ -55,11 +54,7 @@ def main():
         print(e)
         return
     
-    costo = calcular_costo(clave, minutos)
-
-    if costo != 0:
-    
-        print(f"El costo de llamada es de {costo} u")
+    calcular_costo(clave, minutos)
 
 if __name__ == '__main__':
 

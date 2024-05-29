@@ -54,16 +54,20 @@ public class Problema_2_12 {
             System.out.print("Sueldo: ");
             sueldo = scanner.nextFloat();
 
+            if (sueldo <= 0) {
+
+                System.out.println("Error: el sueldo debe ser mayor que cero.");
+                return;
+            }
             System.out.print("Categoría: ");
             categoria = scanner.nextInt();
 
             System.out.print("Horas extra: ");
             horasExtra = scanner.nextInt();
 
-            if (sueldo <= 0 || categoria <= 0 || horasExtra < 0) {
+            if (horasExtra < 0) {
 
-                System.out.println("Error: el sueldo y la categoría deben ser mayor que cero.");
-                System.out.println("Además, las horas extra debe ser mayor o igual a cero.");
+                System.out.println("Error: las horas extra debe ser mayor o igual a cero.");
                 return;
             }
         } catch (InputMismatchException e) {

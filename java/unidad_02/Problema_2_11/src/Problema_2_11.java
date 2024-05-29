@@ -8,42 +8,49 @@ import java.util.InputMismatchException;
 
 public class Problema_2_11 {
 
-    public static float calcularCosto(int clave, int minutos) {
+    public static void calcularCosto(int clave, int minutos) {
 
-        float costo = 0;
+        float costo;
 
         switch (clave) {
 
             case 12:
 
                 costo = minutos * 2;
+                break;
 
             case 15:
 
                 costo = minutos * (float) 2.2;
+                break;
 
             case 18:
 
                 costo = minutos * (float) 4.5;
+                break;
 
             case 19:
 
                 costo = minutos * (float) 3.5;
+                break;
 
             case 23:
             case 25:
 
                 costo = minutos * 6;
+                break;
 
             case 29:
 
                 costo = minutos * 5;
+                break;
 
             default:
 
                 System.out.println("Error: clave no válida.");
+                return;
         }
-        return costo;
+        System.out.printf("El costo de llamada es de %.2f u", costo);
     }
 
     public static void main(String[] args) {
@@ -55,7 +62,7 @@ public class Problema_2_11 {
             System.out.print("Clave telefónica: ");
             clave = scanner.nextInt();
 
-            System.out.print("Duración de la llamada (min): ");
+            System.out.print("Duración de llamada (min): ");
             minutos = scanner.nextInt();
 
             if (minutos <= 0) {
@@ -68,11 +75,6 @@ public class Problema_2_11 {
             System.out.println(e);
             return;
         }
-        float costo = calcularCosto(clave, minutos);
-
-        if (costo != 0) {
-
-            System.out.printf("El costo de llamada es de %.2f u", costo);
-        }
+        calcularCosto(clave, minutos);
     }
 }
